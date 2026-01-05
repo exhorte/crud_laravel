@@ -6,18 +6,18 @@
             <div class="card-header">
                 <div class="row">
                     <div class="col">
-                        <h2>ProducListt </h2>
+                        <h2>Products Trashed</h2>
                     </div>
                     <div class="col">
                         <div class="row">
                             <div class="col-md-8">
                                 <form class="d-flex" role="search" method="GET" action="{{ route('product.trashed') }}">
-                                    <input class="form-control me-2" type="search" name="search" placeholder="Search" aria-label="Search" value="{{ request('search') }}"/>
+                                    <input class="form-control me-2" type="search" name="search" placeholder="input" aria-label="Search" value="{{ request('search') }}"/>
                                     <button class="btn btn-outline-success" type="submit">Search</button>
                                 </form>
                             </div>
                             <div class="col-md-4 d-flex gap-2">
-                                <a href="{{ route('product.index') }}" class="float-end btn btn-warning">View all products</a>
+                                <a href="{{ route('product.index') }}" class="float-end btn btn-warning">All products</a>
                             </div>
                         </div>
                     </div>

@@ -6,18 +6,18 @@
             <div class="card-header">
                 <div class="row">
                     <div class="col">
-                        <h2>ProducListt </h2>
+                        <h2>Products List</h2>
                     </div>
                     <div class="col">
                         <div class="row">
                             <div class="col-md-8">
                                 <form class="d-flex" role="search" method="GET" action="{{ route('product.index') }}">
-                                    <input class="form-control me-2" type="search" name="search" placeholder="Search" aria-label="Search" value="{{ request('search') }}"/>
+                                    <input class="form-control me-2" type="search" name="search" placeholder="input" aria-label="Search" value="{{ request('search') }}"/>
                                     <button class="btn btn-outline-success" type="submit">Search</button>
                                 </form>
                             </div>
                             <div class="col-md-4 d-flex gap-2">
-                                <a href="{{ route('product.trashed') }}" class="float-end btn btn-warning">Show Deleted</a>
+                                <a href="{{ route('product.trashed') }}" class="float-end btn btn-warning">Trashe</a>
                                 <a href="/create-product" class="float-end btn btn-success">Add New</a>
                             </div>
                         </div>
@@ -42,6 +42,7 @@
       <th scope="col">Price</th>
       <th scope="col">Status</th>
       <th scope="col">Description</th>
+      <th scope="col" colspan="3" class="text-center">Actions</th>
     </tr>
   </thead>
   <tbody>
@@ -61,7 +62,7 @@
                 <form action="{{ route('product.destroy', $product->id) }}" method="post" style="display: inline;">
                     @csrf
                     @method('DELETE')
-                    <button onclick="return confirm('Are you sure you want to delete this product?')" type="submit" class="btn btn-danger btn-sm">Delete</button>
+                    <button onclick="return confirm('Are you sure you want to delete this product?')" type="submit" class="btn btn-secondary btn-sm">Move to trash</button>
                 </form>
             </td>
         </tr>
