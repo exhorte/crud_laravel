@@ -1,4 +1,6 @@
-<p align="center"><img src="/Laravel/laravel-12-crud/resources/images/crud.png" width="400" alt="Laravel Crud"></p>
+<p align="center">
+  <img src="https://github.com/exhorte/crud_laravel/blob/main/crud.png" width="400" alt="Laravel CRUD">
+</p>
 
 # Laravel 12 CRUD – Gestion des Produits
 
